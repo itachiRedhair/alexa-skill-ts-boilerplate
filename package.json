@@ -1,0 +1,14 @@
+{
+    "name": "project-name",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+        "start": "alexa-skill-local --file lambda/custom/index.js --config lambda/custom/asl-config.json",
+        "start:debug": "alexa-skill-local --inspect-brk --file lambda/custom/index.js --config lambda/custom/asl-config.json",
+        "deploy": "ask deploy -t lambda -p {your_profile}",
+        "getModel": "ask api get-model -s {your_skill_id} -g development -l en-US>models/en-US.json -p {your_profile}",
+        "updateModel": "ask api update-model -s {your_skill_id} --file models/en-US.json -l en-US --profile {your_profile} --stage development"
+    },
+    "author": "",
+    "license": "ISC"
+}
